@@ -15,4 +15,7 @@ public class Juez
     public string Nacionalidad { get; set; }
 
     public List<Competencia> Competencias { get; set; }
+
+    public string Usuario { get; set; }
+    public string Contraseña { get; set; }
 }
