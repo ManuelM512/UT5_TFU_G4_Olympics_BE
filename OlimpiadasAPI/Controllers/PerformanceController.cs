@@ -65,7 +65,7 @@ public class PerformanceController : ControllerBase
         public async Task Live(CancellationToken cancellationToken)
         {
             var response = Response;
-            response.Headers.Add("Content-Type", "text/event-stream");
+            response.Headers.Append("Content-Type", "text/event-stream");
 
             var tcs = new TaskCompletionSource();
 
