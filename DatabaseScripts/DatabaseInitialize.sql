@@ -22,7 +22,14 @@ CREATE TABLE Competidor (
     nombre VARCHAR(255) NOT NULL,
     sexo VARCHAR(50) NOT NULL,
     nacionalidad VARCHAR(255) NOT NULL,
-    edad INT NOT NULL
+    edad INT NOT NULL,
+    descripcion_id INT NOT NULL,
+    FOREIGN KEY (descripcion_id) REFERENCES DatosCompetidor(id)
+);
+
+CREATE TABLE DatosCompetidor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descripcion VARCHAR(255) NOT NULL
 );
 
 -- Create the Actuacion table
