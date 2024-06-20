@@ -17,4 +17,11 @@ public class Competencia
     public List<Actuacion> Actuaciones { get; set; }
     public List<Juez> Jueces { get; set; }
     public List<Competidor> Competidores { get; set; }
+
+    public IState state { get; set; }
+
+    public void ChangeState(IState state)
+    {
+       this.state = state; 
+    }
 }
