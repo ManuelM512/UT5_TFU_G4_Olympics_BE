@@ -59,6 +59,7 @@ CREATE TABLE Halterofilia (
     arrancada FLOAT,
     dos_tiempos FLOAT,
     peso FLOAT,
+    genero VARCHAR(2),
     FOREIGN KEY (actuacion_id) REFERENCES Actuacion(id)
 );
 

@@ -1,9 +1,10 @@
 namespace OlimpiadasApi.Models;
 
+using OlimpiadasApi.Visitors;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Surf
+public class Surf : ICompetencia
 {
     [Key]
     public int Id { get; set; }
@@ -18,4 +19,10 @@ public class Surf
     public float Variedad { get; set; }
     public float PotenciaRadicalidad { get; set; }
     public float Progresion { get; set; }
+
+    public List<float> attributes { get; set; }
+    public List<float> Accept(IVisitor<Surf> visitor)
+    {
+        return visitor.Visit(this);
+    }
 }
