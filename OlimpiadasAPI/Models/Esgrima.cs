@@ -17,7 +17,4 @@ public class Esgrima
     public float Prioridad { get; set; }
     public int Asalto { get; set; }
     public int Combate { get; set; }
-
-
-
 }

@@ -15,4 +15,5 @@ public class Halterofilia
     public float Arrancada { get; set; }
     public float DosTiempos { get; set; }
     public float Peso { get; set; }
+    public string Genero { get; set; }
 }
